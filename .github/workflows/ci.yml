@@ -5,11 +5,10 @@ on:
 jobs:
   foo:
     runs-on: ubuntu-machined
+    strategy:
+      matrix:
+        foo: [bar, baz, qoux]
+        a: [b, c, d]
     steps:
       - run: "echo 'hello world'"
-  bar:
-    needs: [foo]
-    runs-on: ubuntu-machined
-    steps:
-    - run: "echo 'goodbye world'"
     
