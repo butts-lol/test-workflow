@@ -1,0 +1,15 @@
+on:
+  push:
+  workflow_dispatch: {}
+
+jobs:
+  foo:
+    runs-on: ubuntu-machined
+    steps:
+      - run: "echo 'hello world'"
+  bar:
+    needs: [foo]
+    runs-on: ubuntu-machined
+    steps:
+    - run: "echo 'goodbye world'"
+    
