@@ -9,6 +9,7 @@ jobs:
       matrix:
         foo: [bar, baz, qoux]
         a: [b, c, d]
+        e: [f, g, h]
     steps:
       - run: "echo 'hello world'"
     
